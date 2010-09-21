@@ -17,6 +17,12 @@ import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
  */
 public class main {
 
+    public static CharSequence[] locationalPrepositions = {
+        " in", " on", " at", " by", " near", " nearby", " above", " below", " over",
+        " under", " up", " down", " around", " through", " inside", " outside",
+        " between", " beside", " beyond", " behind", " within", " beneath",
+        " underneath", " among", " along", " against", " where", " here" , " to" };
+
     /**
      * @param args the command line arguments
      */
@@ -53,14 +59,14 @@ public class main {
                 int i = 0;
                 while (it.hasNext()) {
                     Tree child = it.next();
-                    System.out.println("***** " + i + " ***** NN " + child.nodeNumber(t) + " " + child.label());
+                    //System.out.println("***** " + i + " ***** NN " + child.nodeNumber(t) + " " + child.label());
                     if (child.isPhrasal()) {
                         if (child.label().toString().compareTo("ROOT") == 0) {
                             /* Skip the root, we are not analysing it */
                         } else if (child.label().toString().compareTo("S") == 0) {
                             /* If we are not a part of a VP or NP already, skip? */
                         } else if (child.label().toString().compareTo("NP") == 0) {
-                            System.out.println(child.label().toString() + " *** " + child);
+                            //System.out.println(child.label().toString() + " *** " + child);
                             List<Tree> leaves = child.getLeaves();
                             Iterator<Tree> it1 = leaves.iterator();
                             //System.out.println(leaves.size());
@@ -70,6 +76,13 @@ public class main {
                                 Tree t1 = it1.next();
                                 val = val.concat(" " + t1.toString());
                                 lastNodeNumber = t1.nodeNumber(t);
+                            }
+
+                            for (CharSequence s: locationalPrepositions) {
+                                if (val.contains(s)) {
+                                    result.setWhere(val.substring(val.indexOf(s.toString())));
+                                    val = val.substring(0, (val.indexOf(s.toString()) + 1));
+                                }
                             }
 
                             if (result.getWhat().isEmpty()) {
@@ -86,7 +99,9 @@ public class main {
                                 }
                             }
                         } else if (child.label().toString().compareTo("VP") == 0) {
-                            System.out.println(child.label().toString() + " *** " + child);
+                            Tree local = child.localTree();
+                            //System.out.println(local);
+                            //System.out.println(child.label().toString() + " *** " + child);
                             List<Tree> leaves = child.getLeaves();
                             Iterator<Tree> it1 = leaves.iterator();
                             //System.out.println(leaves.size());
@@ -96,6 +111,13 @@ public class main {
                                 Tree t1 = it1.next();
                                 val = val.concat(" " + t1.toString());
                                 lastNodeNumber = t1.nodeNumber(t);
+                            }
+                            
+                            for (CharSequence s: locationalPrepositions) {
+                                if (val.contains(s)) {
+                                    result.setWhere(val.substring(val.indexOf(s.toString())));
+                                    val = val.substring(0, (val.indexOf(s.toString()) + 1));
+                                }
                             }
 
                             if (result.getWho().isEmpty()) {
@@ -111,14 +133,9 @@ public class main {
                                     mfChild = it.next();
                                 }
                             }
-                        } else
-                            System.out.println(child.label().toString() + " *** " + child);
-//                        System.out.println(child.label() + " " + child.score());
-                    } else if (child.isLeaf()) {
-//                        System.out.println(child);
-//                        Set<Dependency<Label, Label, Object>> deps = t.dependencies();
-                    } else if (child.isPreTerminal()) {
-//                        System.out.println(child.firstChild());
+                        } //else
+                          //System.out.println(child.label().toString() + " *** " + child);
+                        //System.out.println(child.label() + " " + child.score());
                     }
                     ++i;
                 }

@@ -16,5 +16,3 @@ There is neither a dog nor a cat here.
 Playing the piano bothers John.
 To pretend that our program is usable in its current form would be silly.
 Using the conventional Minuet form, Beethoven produced a piece of great originality.
-The three cats ate slowly.
-When we arrive, you will have already left.
