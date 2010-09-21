@@ -1,0 +1,126 @@
+The fact that he smiled at me gives me hope.
++ who   -> me
++ what  -> he smiled at me
++ when  ->
++ where ->
++ why   ->
+
+Many people were angered by the hearings.
++ who   -> Many people
++ what  -> were angered
++ when  ->
++ where ->
++ why   -> by the hearings
+
+The thousands of people who attended enjoyed it.
++ who   -> The thousands of people who attended
++ what  -> enjoyed it
++ when  ->
++ where ->
++ why   ->
+
+We're thinking about going to a movie this evening.
++ who   -> We
++ what  -> 're thinking about going
++ when  -> this evening
++ where -> to a movie
++ why   ->
+
+He is being hired by another company.
++ who   -> He
++ what  -> is being hired by another company
++ when  ->
++ where ->
++ why   ->
+
+I have doubts about inviting him.
++ who   -> I
++ what  -> have doubts
++ when  ->
++ where ->
++ why   ->
+
+You are lucky that there is no exam today.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+He is apparently an expert on dogs.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+Which dog did you chase?
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+There is a dog in the park.
++ who   -> a dog
++ what  -> There is
++ when  ->
++ where -> in the park
++ why   ->
+
+Our program works more elegantly than yours.
++ who   -> Our program
++ what  -> works
++ when  ->
++ where ->
++ why   -> more elegantly than yours
+
+The shuttle is so big that it has to be carried on the back of a jet.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+The man we saw when we went to Paris is here.
++ who   -> The man
++ what  -> is here
++ when  -> we saw when we went to Paris
++ where ->
++ why   ->
+
+I went to the store and got a gallon of milk.
++ who   -> I
++ what  -> went
++ when  ->
++ where -> to the store
++ why   -> got a gallon of milk
+
+There is neither a dog nor a cat here.
++ who   -> a dog nor a cat
++ what  -> There is neither
++ when  ->
++ where -> here
++ why   ->
+
+Playing the piano bothers John.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+To pretend that our program is usable in its current form would be silly.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
+Using the conventional Minuet form, Beethoven produced a piece of great originality.
++ who   ->
++ what  ->
++ when  ->
++ where ->
++ why   ->
+
